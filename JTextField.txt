@@ -1,0 +1,56 @@
+
+		
+		insertSaleId = new JTextField();
+		insertSaleId.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		insertSaleId.setBounds(114, 312, 182, 34);
+		cashRegister.add(insertSaleId);
+		
+		insertClientId = new JTextField();
+		insertClientId.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		insertClientId.setBounds(328, 312, 187, 34);
+		cashRegister.add(insertClientId);
+		
+		insertClientName = new JTextField();
+		insertClientName.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		insertClientName.setBounds(545, 312, 592, 34);
+		cashRegister.add(insertClientName);
+		
+		insertProductCode = new JTextField();
+		insertProductCode.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		insertProductCode.setBounds(114, 408, 182, 34);
+		cashRegister.add(insertProductCode);
+		
+		productName = new JTextField();
+		productName.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		productName.setBounds(328, 408, 187, 34);
+		cashRegister.add(productName);
+		
+		productDescription = new JTextField();
+		productDescription.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		productDescription.setBounds(545, 408, 592, 85);
+		cashRegister.add(productDescription);
+		
+		productQuantity = new JTextField();
+		productQuantity.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		productQuantity.setBounds(114, 504, 187, 34);
+		cashRegister.add(productQuantity);
+		
+		priceValue = new JTextField();
+		priceValue.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		priceValue.setBounds(328, 504, 187, 34);
+		cashRegister.add(priceValue);
+		
+		sumValue = new JTextField();
+		sumValue.setFont(new Font("Tahoma", Font.BOLD, 28));
+		sumValue.setBounds(328, 684, 187, 55);
+		cashRegister.add(sumValue);
+		
+		discountValue = new JTextField();
+		discountValue.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		discountValue.setBounds(328, 600, 187, 34);
+		cashRegister.add(discountValue);
+		
+		JTable table = new JTable();
+		table.setEnabled(false);
+		table.setBounds(545, 504, 592, 235);
+		cashRegister.add(table);

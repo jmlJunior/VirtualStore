@@ -1,0 +1,26 @@
+231525600	Smartphone		Smartphone Motorola Edge 20 Pro 256GB Azul 5G 12GB RAM Tela 6,7”						10
+231525601	Capa Celular		Capa Motorola Edge 20 PRO Transparente										2
+231525602	Capa Celular		Capa Motorola Edge 20 PRO TPU Fibra de Carbono Azul								2
+231525603	Capa Celular		Capa Motorola Moto Edge 20 Pro Soft Touch Preto									2
+231525604	Capa Celular		Capinha Motorola Edge 20 PRO Van Gogh - Landscape With Houses							2
+231525605	Capa Celular		Capa Motorola Edge 20 PRO Jardim Clássico									2
+231525610	Película Celular	Película de Gel Motorola Edge 20 Pro										5
+231525620	Película Celular	Película de Vidro Motorola Edge 20 Pro										5
+234751700	Smartphone		Smartphone Samsung Galaxy A53 128GB Azul 5G - 8GB RAM								10
+234751701	Capa Celular		Capa Samsung Galaxy A53 5G Transparente										2
+234751702	Capa Celular		Capa Samsung Galaxy A53 5G Silicone Preto									2
+234751703	Capa Celular		Capa Samsung Galaxy A53 Ovelha Feliz										2
+234751704	Capa Celular		Capa Samsung Galaxy A53 Van Gogh - Landscape With Houses							2
+234751705	Capa Celular		Capa Samsung Galaxy A53 Lírio da Paz										2
+234751710	Película Celular	Película de Gel Samsung Galaxy A53										5
+234751720	Película Celular	Película de Vidro Samsung Galaxy A53										5
+234993300	Smartphone		Smartphone Motorola Moto G52 128GB Branco 4G Octa-Core 4GB RAM							10
+234993301	Capa Celular		Capa Motorola Moto G52 Fibra de Carbono Azul									2
+234993302	Capa Celular		Capa Motorola Moto G52 Silicone Transparente									2
+234993303	Capa Celular		Capa Motorola Moto G52 Soft Touch Preto										2
+234993304	Capa Celular		Capa Motorola Moto G52 Van Gogh - Landscape With Houses								2
+234993305	Capa Celular		Capa Carteira Couro Mostarda Motorola Moto G52 - CELLWAY							2
+234993310	Película Celular	Película de Gel Motorola Moto G52										5
+234993320	Película Celular	Película de Vidro Motorola Moto G52										5
+235892002	Notebook		Notebook ASUS VivoBook 15 X513EA-EJ1065T INTEL CORE I7 1165G7 / 8 GB / 512 GB SSD / Windows 10 Home / Black	3
+235892005	Notebook		Notebook Acer Swift 3 SF314-511-77M4 EVO Ultrafino Intel Core i7 11ª Gen Windows 11 Home 16GB 512GB SSD 14' FHD	3

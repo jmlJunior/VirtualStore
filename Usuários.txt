@@ -1,0 +1,7 @@
+Nicolas Monteiro	22652951	Gerente		Monteiro	123
+Emilly Azevedo		22994010	Gerente		Emilly		234
+Luiz Felipe Barros	23508753	Vendedor	Luiz Felipe	456
+Ana Sophia Costa	26075857	Vendedor	Ana Sophia	345
+Maria Fernanda Porto	31441749	Vendedor	Maria Fernanda	789
+Joao Pedro Cardoso	34859890	Vendedor	Joao Pedro	678
+Giovanna Moraes		35058689	Vendedor	Giovanna	567
