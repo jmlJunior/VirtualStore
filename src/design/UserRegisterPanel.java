@@ -68,12 +68,12 @@ public class UserRegisterPanel extends JPanel {
 		JLabel idNumber = new JLabel("N\u00BA de Cadastro:");
 		idNumber.setForeground(new Color(153, 0, 51));
 		idNumber.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 36));
-		idNumber.setBounds(924, 233, 220, 40);
+		idNumber.setBounds(917, 233, 220, 40);
 		userRegistration.add(idNumber);
 		
 		insertId = new JTextField();
 		insertId.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		insertId.setBounds(924, 271, 220, 34);
+		insertId.setBounds(917, 271, 220, 34);
 		userRegistration.add(insertId);
 		
 		position = new JLabel("Cargo:");
@@ -115,26 +115,28 @@ public class UserRegisterPanel extends JPanel {
 		passwordConfirm.setHorizontalAlignment(SwingConstants.LEFT);
 		passwordConfirm.setForeground(new Color(153, 0, 51));
 		passwordConfirm.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 36));
-		passwordConfirm.setBounds(924, 328, 220, 41);
+		passwordConfirm.setBounds(917, 328, 220, 41);
 		userRegistration.add(passwordConfirm);
 		
 		passwordFieldConfirm = new JPasswordField();
 		passwordFieldConfirm.setHorizontalAlignment(SwingConstants.CENTER);
 		passwordFieldConfirm.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		passwordFieldConfirm.setBounds(924, 369, 220, 34);
+		passwordFieldConfirm.setBounds(917, 372, 220, 34);
 		userRegistration.add(passwordFieldConfirm);
 		
 		enter = new JButton("CADASTRAR");
+		enter.setForeground(new Color(0, 100, 0));
 		enter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				UserRegistration.Register();
 			}
 		});
 		enter.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
-		enter.setBounds(994, 466, 150, 41);
+		enter.setBounds(987, 466, 150, 41);
 		userRegistration.add(enter);
 		
 		clear = new JButton("LIMPAR");
+		clear.setForeground(new Color(204, 102, 0));
 		clear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				insertName.setText("");
@@ -146,10 +148,11 @@ public class UserRegisterPanel extends JPanel {
 			}
 		});
 		clear.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
-		clear.setBounds(994, 414, 150, 41);
+		clear.setBounds(987, 414, 150, 41);
 		userRegistration.add(clear);
 		
 		out = new JButton("SAIR");
+		out.setForeground(new Color(153, 0, 0));
 		out.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				UserInterface.InitialScreen();
@@ -158,20 +161,22 @@ public class UserRegisterPanel extends JPanel {
 			}
 		});
 		out.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
-		out.setBounds(994, 784, 150, 41);
+		out.setBounds(1015, 802, 122, 41);
 		userRegistration.add(out);
 		
 		consult = new JButton("CONSULTAR");
+		consult.setForeground(new Color(0, 100, 0));
 		consult.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				UserRegistration.consultUser();				
 			}
 		});
 		consult.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
-		consult.setBounds(381, 784, 145, 41);
+		consult.setBounds(381, 802, 145, 41);
 		userRegistration.add(consult);
 		
 		consultClear = new JButton("LIMPAR");
+		consultClear.setForeground(new Color(204, 102, 0));
 		consultClear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				nameFunction.setText("");
@@ -179,10 +184,11 @@ public class UserRegisterPanel extends JPanel {
 			}
 		});
 		consultClear.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
-		consultClear.setBounds(547, 784, 145, 41);
+		consultClear.setBounds(548, 802, 145, 41);
 		userRegistration.add(consultClear);
 		
 		remove = new JButton("EXCLUIR");
+		remove.setForeground(Color.RED);
 		remove.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				UserRegistration.deleteUser();
@@ -191,7 +197,7 @@ public class UserRegisterPanel extends JPanel {
 			}
 		});
 		remove.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
-		remove.setBounds(715, 784, 145, 41);
+		remove.setBounds(715, 802, 145, 41);
 		userRegistration.add(remove);
 		
 		JLabel lblConsultarRemover = new JLabel("CONSULTAR / REMOVER USU\u00C1RIOS:");
@@ -214,7 +220,7 @@ public class UserRegisterPanel extends JPanel {
 		nameFunction = new JTextField();
 		nameFunction.setHorizontalAlignment(SwingConstants.CENTER);
 		nameFunction.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		nameFunction.setBounds(381, 699, 479, 76);
+		nameFunction.setBounds(381, 699, 479, 86);
 		userRegistration.add(nameFunction);
 		
 		JLabel nfCheck = new JLabel("Nome / Cargo:");
@@ -226,13 +232,13 @@ public class UserRegisterPanel extends JPanel {
 		JSeparator separator = new JSeparator();
 		separator.setForeground(new Color(153, 0, 51));
 		separator.setBackground(new Color(153, 0, 51));
-		separator.setBounds(117, 550, 1027, 15);
+		separator.setBounds(117, 550, 1020, 15);
 		userRegistration.add(separator);
 		
 		separator_1 = new JSeparator();
 		separator_1.setForeground(new Color(153, 0, 51));
 		separator_1.setBackground(new Color(153, 0, 51));
-		separator_1.setBounds(117, 547, 1027, 15);
+		separator_1.setBounds(117, 547, 1020, 15);
 		userRegistration.add(separator_1);
 	}
 

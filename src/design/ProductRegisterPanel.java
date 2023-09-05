@@ -109,16 +109,18 @@ public class ProductRegisterPanel extends JPanel {
 		productRegistration.add(insertPrice);
 		
 		enter = new JButton("CADASTRAR");
+		enter.setForeground(new Color(0, 100, 0));
 		enter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ProductRegistration.Register();
 			}
 		});
 		enter.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
-		enter.setBounds(987, 750, 150, 41);
+		enter.setBounds(178, 802, 150, 41);
 		productRegistration.add(enter);
 		
 		clear = new JButton("LIMPAR");
+		clear.setForeground(new Color(204, 102, 0));
 		clear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				insertProdCod.setText("");
@@ -129,10 +131,11 @@ public class ProductRegisterPanel extends JPanel {
 			}
 		});
 		clear.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
-		clear.setBounds(855, 750, 122, 41);
+		clear.setBounds(346, 802, 122, 41);
 		productRegistration.add(clear);
 		
 		out = new JButton("SAIR");
+		out.setForeground(new Color(153, 0, 0));
 		out.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				UserInterface.InitialScreen();
@@ -141,7 +144,7 @@ public class ProductRegisterPanel extends JPanel {
 			}
 		});
 		out.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
-		out.setBounds(723, 750, 122, 41);
+		out.setBounds(1015, 802, 122, 41);
 		productRegistration.add(out);
 	}
 

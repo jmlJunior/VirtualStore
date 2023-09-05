@@ -52,7 +52,7 @@ public class ProductRegistration extends ProductRegisterPanel {
 			
 			finally {
 				DB.closeStatement(st);
-				DB.closeConnetction();
+				//DB.closeConnetction();
 			}
 			
 			ProductRegisterPanel.insertProdName.setText("");

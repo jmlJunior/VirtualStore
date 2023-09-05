@@ -57,7 +57,7 @@ public class UserInterface extends JFrame {
 	public UserInterface() {
 				
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setExtendedState(java.awt.Frame.MAXIMIZED_BOTH);
+		//setExtendedState(java.awt.Frame.MAXIMIZED_BOTH);
 		setBounds(325, 0, 1263, 950);
 		mainTab = new JPanel();
 		mainTab.setLayout(new GridLayout());
@@ -87,10 +87,10 @@ public class UserInterface extends JFrame {
 		
 		
 		//Este bloco (abaixo) deverá ser apagado após a finalização do projeto pois ele habilita todas as abas
-		tabbedPane.setEnabledAt(1, true);
+		/*tabbedPane.setEnabledAt(1, true);
 		tabbedPane.setEnabledAt(2, true);
 		tabbedPane.setEnabledAt(3, true);
-		tabbedPane.setEnabledAt(4, true);
+		tabbedPane.setEnabledAt(4, true);*/
 	
 	}
 	
@@ -118,8 +118,10 @@ public class UserInterface extends JFrame {
 	
 	public static void SellerScreen() {
 		tabbedPane.setEnabledAt(0, false);
+		tabbedPane.setEnabledAt(1, false);
+		tabbedPane.setEnabledAt(2, false);
 		tabbedPane.setEnabledAt(3, true);
-		tabbedPane.setEnabledAt(4, true);
+		tabbedPane.setEnabledAt(4, false);
 		tabbedPane.setSelectedIndex(3);
 	}
 

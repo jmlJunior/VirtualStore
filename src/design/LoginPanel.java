@@ -74,6 +74,7 @@ public class LoginPanel extends JPanel {
 		userPage.add(passwordField);
 		
 		enter = new JButton("ENTRAR");
+		enter.setForeground(new Color(0, 100, 0));
 		enter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				UserLogin.GetAccess();					
@@ -84,6 +85,7 @@ public class LoginPanel extends JPanel {
 		userPage.add(enter);
 		
 		clear = new JButton("LIMPAR");
+		clear.setForeground(new Color(204, 102, 0));
 		clear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textField.setText("");
@@ -96,6 +98,7 @@ public class LoginPanel extends JPanel {
 		userPage.add(clear);
 		
 		out = new JButton("SAIR");
+		out.setForeground(new Color(153, 0, 0));
 		out.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
