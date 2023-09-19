@@ -27,9 +27,9 @@ public class AccessBd {
 			e.printStackTrace();
 		}
 		
-				
 		DB.getConnection();
 		DB.closeConnetction();
+		
 	}
 
 }

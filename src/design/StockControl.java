@@ -312,13 +312,13 @@ public class StockControl extends JPanel {
 		checkStockAct = new JCheckBox("ATUALIZAR ESTOQUE");
 		checkStockAct.setFont(new Font("Tahoma", Font.BOLD, 14));
 		checkStockAct.setBackground(Color.LIGHT_GRAY);
-		checkStockAct.setBounds(365, 794, 220, 23);
+		checkStockAct.setBounds(364, 820, 221, 23);
 		control.add(checkStockAct);
 		
 		checkDescAct = new JCheckBox("ATUALIZAR DESCRI\u00C7\u00C3O");
 		checkDescAct.setFont(new Font("Tahoma", Font.BOLD, 14));
 		checkDescAct.setBackground(Color.LIGHT_GRAY);
-		checkDescAct.setBounds(365, 820, 220, 23);
+		checkDescAct.setBounds(364, 794, 221, 23);
 		control.add(checkDescAct);
 	}
 

@@ -231,6 +231,7 @@ public class CashRegister extends JFrame {
 		**/
 
 		enter = new JButton("REGISTRAR");
+		enter.setForeground(new Color(0, 100, 0));
 		enter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				SaleRegistration.SaleConfirm();
@@ -256,6 +257,7 @@ public class CashRegister extends JFrame {
 		cashRegister.add(enter);
 
 		explore = new JButton("PESQUISAR");
+		explore.setForeground(new Color(0, 100, 0));
 		explore.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				SaleRegistration.SaleConsult();
@@ -266,6 +268,7 @@ public class CashRegister extends JFrame {
 		cashRegister.add(explore);
 
 		clear = new JButton("LIMPAR");
+		clear.setForeground(new Color(204, 102, 0));
 		clear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -286,6 +289,7 @@ public class CashRegister extends JFrame {
 		cashRegister.add(clear);
 
 		out = new JButton("SAIR");
+		out.setForeground(Color.RED);
 		out.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -300,6 +304,7 @@ public class CashRegister extends JFrame {
 		cashRegister.add(out);
 
 		insert = new JButton("SACOLA");
+		insert.setForeground(new Color(0, 100, 0));
 		insert.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -323,6 +328,7 @@ public class CashRegister extends JFrame {
 		cashRegister.add(insert);
 		
 		JButton remove = new JButton("EXCLUIR");
+		remove.setForeground(Color.RED);
 		remove.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				SaleRegistration.RemoveFromBag();

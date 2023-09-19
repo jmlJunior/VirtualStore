@@ -58,7 +58,7 @@ public class UserInterface extends JFrame {
 				
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//setExtendedState(java.awt.Frame.MAXIMIZED_BOTH);
-		setBounds(325, 0, 1263, 950);
+		setBounds(325, 0, 1295, 990);
 		mainTab = new JPanel();
 		mainTab.setLayout(new GridLayout());
 		setContentPane(mainTab);
