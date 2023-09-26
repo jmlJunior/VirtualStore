@@ -135,7 +135,7 @@ public class ProductRegisterPanel extends JPanel {
 		productRegistration.add(clear);
 		
 		out = new JButton("SAIR");
-		out.setForeground(new Color(153, 0, 0));
+		out.setForeground(new Color(178, 34, 34));
 		out.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				UserInterface.InitialScreen();

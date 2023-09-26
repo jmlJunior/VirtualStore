@@ -9,26 +9,26 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
 import design.CashRegister;
+import design.ClientRegisterPanel;
 import design.LoginPanel;
 import design.ProductRegisterPanel;
 import design.StockControl;
 import design.UserRegisterPanel;
 
 /**
- * Este JTabbedPane cria a base principal que suporta todas as abas/(tabbedPanes) do programa
- * @author jmlag
- *
+ * Este JFrame cria a base principal que suporta todas as abas/(tabbedPanes) do programa
  **/
 
 public class UserInterface extends JFrame {
 	
 	private static final long serialVersionUID = 1L;
 	
-	private static JTabbedPane tabbedPane;
+	public static JTabbedPane tabbedPane;
 	
 	private JPanel mainTab;
 	LoginPanel login = new LoginPanel();
 	UserRegisterPanel user = new UserRegisterPanel();
+	ClientRegisterPanel client = new ClientRegisterPanel();
 	ProductRegisterPanel product = new ProductRegisterPanel();
 	StockControl stock = new StockControl();
 	CashRegister cash = new CashRegister();
@@ -73,8 +73,9 @@ public class UserInterface extends JFrame {
 		
 		tabbedPane.addTab("Login do Usuário", null, login.getUserPage(), BorderLayout.CENTER);
 		tabbedPane.addTab("Cadastro de Usuários", null, user.getUserRegistration(), BorderLayout.CENTER);
-		tabbedPane.addTab("Cadastro de Produtos", null, product.getProductRegistration(), BorderLayout.CENTER);
+		tabbedPane.addTab("Cadastro de Clientes", null, client.getClientRegister(), BorderLayout.CENTER);
 		tabbedPane.addTab("Controle de CAIXA", null, cash.getCashRegister(), BorderLayout.CENTER);
+		tabbedPane.addTab("Cadastro de Produtos", null, product.getProductRegistration(), BorderLayout.CENTER);
 		tabbedPane.addTab("Controle de Estoque", null, stock.getControl(), BorderLayout.CENTER);
 		
 		/**
@@ -84,14 +85,14 @@ public class UserInterface extends JFrame {
 		tabbedPane.setEnabledAt(2, false);
 		tabbedPane.setEnabledAt(3, false);
 		tabbedPane.setEnabledAt(4, false);
-		
-		
-		//Este bloco (abaixo) deverá ser apagado após a finalização do projeto pois ele habilita todas as abas
-		/*tabbedPane.setEnabledAt(1, true);
+		tabbedPane.setEnabledAt(5, false);
+
+		//Este bloco de teste (abaixo) deverá ser apagado após a finalização do projeto pois ele habilita todas as abas
+		tabbedPane.setEnabledAt(1, true);
 		tabbedPane.setEnabledAt(2, true);
 		tabbedPane.setEnabledAt(3, true);
-		tabbedPane.setEnabledAt(4, true);*/
-	
+		tabbedPane.setEnabledAt(4, true);
+		tabbedPane.setEnabledAt(5, true);
 	}
 	
 	/**
@@ -105,6 +106,7 @@ public class UserInterface extends JFrame {
 		tabbedPane.setEnabledAt(2, false);
 		tabbedPane.setEnabledAt(3, false);
 		tabbedPane.setEnabledAt(4, false);
+		tabbedPane.setEnabledAt(5, false);
 	}
 
 	public static void ManagerScreen() {
@@ -113,16 +115,17 @@ public class UserInterface extends JFrame {
 		tabbedPane.setEnabledAt(2, true);
 		tabbedPane.setEnabledAt(3, true);
 		tabbedPane.setEnabledAt(4, true);
+		tabbedPane.setEnabledAt(5, true);
 		tabbedPane.setSelectedIndex(1);
 	}
 	
 	public static void SellerScreen() {
 		tabbedPane.setEnabledAt(0, false);
 		tabbedPane.setEnabledAt(1, false);
-		tabbedPane.setEnabledAt(2, false);
+		tabbedPane.setEnabledAt(2, true);
 		tabbedPane.setEnabledAt(3, true);
 		tabbedPane.setEnabledAt(4, false);
+		tabbedPane.setEnabledAt(5, false);
 		tabbedPane.setSelectedIndex(3);
 	}
-
 }

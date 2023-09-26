@@ -23,6 +23,7 @@ public class LoginPanel extends JPanel {
 	private JLabel title, subTitle, nameLabel, passwordLabel;
 	public static JTextField textField;
 	public static JPasswordField passwordField;
+	//public static JFrame UserInterface;
 	
 	LoginBackImage userPage;
 
@@ -77,7 +78,9 @@ public class LoginPanel extends JPanel {
 		enter.setForeground(new Color(0, 100, 0));
 		enter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				UserLogin.GetAccess();					
+				UserLogin.GetAccess();
+				textField.setText("");
+				passwordField.setText("");
 			}
 		});
 		enter.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
@@ -90,17 +93,17 @@ public class LoginPanel extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				textField.setText("");
 				passwordField.setText("");
-				
 			}
 		});
 		clear.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
 		clear.setBounds(930, 749, 122, 41);
 		userPage.add(clear);
 		
-		out = new JButton("SAIR");
-		out.setForeground(new Color(153, 0, 0));
+		out = new JButton("FECHAR");
+		out.setForeground(new Color(178, 34, 34));
 		out.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
 			}
 		});
 		out.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));

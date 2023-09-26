@@ -21,6 +21,7 @@ import javax.swing.JTextArea;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JScrollPane;
+//import javax.swing.UIManager;
 
 public class CashRegister extends JFrame {
 
@@ -148,13 +149,13 @@ public class CashRegister extends JFrame {
 		stock.setForeground(new Color(153, 0, 51));
 		stock.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
 		stock.setBackground(Color.WHITE);
-		stock.setBounds(977, 812, 94, 40);
+		stock.setBounds(145, 534, 94, 40);
 		cashRegister.add(stock);
 
 		productQuantity = new JTextField();
 		productQuantity.setHorizontalAlignment(SwingConstants.CENTER);
 		productQuantity.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		productQuantity.setBounds(1075, 812, 62, 34);
+		productQuantity.setBounds(244, 534, 52, 34);
 		cashRegister.add(productQuantity);
 
 		price = new JLabel("Valor Unit\u00E1rio:");
@@ -200,7 +201,6 @@ public class CashRegister extends JFrame {
 		cashRegister.add(discountValue);
 
 		table = new JTable();
-		
 		table.setModel(new DefaultTableModel(
 			new Object[][] {
 			},
@@ -208,8 +208,6 @@ public class CashRegister extends JFrame {
 				"C\u00F3digo", "Produto", "Descri\u00E7\u00E3o/Detalhe", "Qtde", "Valor Unit\u00E1rio"
 			}
 		));
-		
-		
 		table.getColumnModel().getColumn(2).setPreferredWidth(348);
 		table.getColumnModel().getColumn(3).setPreferredWidth(41);
 		table.getColumnModel().getColumn(4).setPreferredWidth(82);
@@ -221,7 +219,7 @@ public class CashRegister extends JFrame {
 		table.getColumnModel().getColumn(4).setCellRenderer(rightRenderer);
 
 		scroll = new JScrollPane();
-		scroll.setBounds(545, 511, 592, 228);
+		scroll.setBounds(545, 511, 592, 280);
 		cashRegister.add(scroll);
 		scroll.add(table);
 		scroll.setViewportView(table);
@@ -253,7 +251,7 @@ public class CashRegister extends JFrame {
 			}
 		});
 		enter.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
-		enter.setBounds(987, 750, 150, 41);
+		enter.setBounds(855, 802, 150, 41);
 		cashRegister.add(enter);
 
 		explore = new JButton("PESQUISAR");
@@ -285,11 +283,11 @@ public class CashRegister extends JFrame {
 			}
 		});
 		clear.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
-		clear.setBounds(696, 750, 122, 41);
+		clear.setBounds(114, 802, 182, 41);
 		cashRegister.add(clear);
 
 		out = new JButton("SAIR");
-		out.setForeground(Color.RED);
+		out.setForeground(new Color(174, 34, 34));
 		out.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -300,7 +298,7 @@ public class CashRegister extends JFrame {
 			}
 		});
 		out.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
-		out.setBounds(564, 750, 122, 41);
+		out.setBounds(1015, 802, 122, 41);
 		cashRegister.add(out);
 
 		insert = new JButton("SACOLA");
@@ -335,7 +333,7 @@ public class CashRegister extends JFrame {
 			}
 		});
 		remove.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
-		remove.setBounds(828, 750, 150, 41);
+		remove.setBounds(545, 802, 150, 41);
 		cashRegister.add(remove);
 	}
 

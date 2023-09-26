@@ -83,7 +83,7 @@ public class StockControl extends JPanel {
 		control.add(clear);
 		
 		out = new JButton("SAIR");
-		out.setForeground(new Color(204, 0, 0));
+		out.setForeground(new Color(178, 34, 34));
 		out.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				UserInterface.InitialScreen();

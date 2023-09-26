@@ -87,7 +87,6 @@ public class ProductUpdate extends StockControl {
     	String description = StockControl.changeProdDesc.getText();
     	String qttyString = StockControl.actQtty.getText();
     	String priceString = StockControl.actProdPrice.getText();
-    	//DecimalFormat fmt = new DecimalFormat("0.00");
     	
     	Connection conn = null;
 		PreparedStatement st = null;

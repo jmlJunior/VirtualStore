@@ -1,7 +1,6 @@
 package resources;
 
 import javax.swing.JOptionPane;
-//import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 import design.LoginPanel;
@@ -9,9 +8,6 @@ import design.LoginPanel;
 public class ThreadClear extends Thread{
 	
 	JTextField nameClean = LoginPanel.textField;
-	//JPasswordField passwordClean = LoginPanel.passwordField;
-	
-	//String passwordClean = new String(LoginPanel.passwordField.getPassword());
 	
 	public String name;
 	
@@ -30,6 +26,5 @@ public class ThreadClear extends Thread{
 			e.fillInStackTrace();
 			JOptionPane.showMessageDialog(null, nameClean);
 		}
-		
 	}
 }
