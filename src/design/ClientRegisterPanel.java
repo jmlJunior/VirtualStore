@@ -10,6 +10,9 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableModel;
+
+import application.ClientRegister;
+
 import javax.swing.JButton;
 //import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
@@ -132,7 +135,16 @@ public class ClientRegisterPanel extends JPanel {
 		enter.setForeground(new Color(0, 100, 0));
 		enter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				ClientRegister.Register();
 				
+				ClientRegister.insertClientCode.setText("");
+				ClientRegister.insertDocNumber.setText("");
+				ClientRegister.insertName.setText("");
+				ClientRegister.insertPosition.setText("");
+				ClientRegister.insertNumber.setText("");
+				ClientRegister.insertCoplement.setText("");
+				ClientRegister.insertPhoneNumber.setText("");
+				ClientRegister.mail.setText("");
 			}
 		});
 		enter.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
@@ -176,7 +188,7 @@ public class ClientRegisterPanel extends JPanel {
 		search.setForeground(new Color(0, 100, 0));
 		search.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				ClientRegister.Search();
 			}
 		});
 		search.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
