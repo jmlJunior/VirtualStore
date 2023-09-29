@@ -63,7 +63,6 @@ public class UserLogin extends LoginPanel {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "DESCULPE!!! NÃO FOI POSSÍVEL ACESSAR A BASE DE DADOS...");
 		}
 
 		finally {

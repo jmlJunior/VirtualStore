@@ -11,12 +11,14 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableModel;
 
+import accessinterface.UserInterface;
 import application.ClientRegister;
 
 import javax.swing.JButton;
 //import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.JCheckBox;
 
 
 public class ClientRegisterPanel extends JPanel {
@@ -131,72 +133,7 @@ public class ClientRegisterPanel extends JPanel {
 		insertPhoneNumber.setBounds(917, 473, 220, 34);
 		clientRegister.add(insertPhoneNumber);
 		
-		JButton enter = new JButton("CADASTRAR");
-		enter.setForeground(new Color(0, 100, 0));
-		enter.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				ClientRegister.Register();
-				
-				ClientRegister.insertClientCode.setText("");
-				ClientRegister.insertDocNumber.setText("");
-				ClientRegister.insertName.setText("");
-				ClientRegister.insertPosition.setText("");
-				ClientRegister.insertNumber.setText("");
-				ClientRegister.insertCoplement.setText("");
-				ClientRegister.insertPhoneNumber.setText("");
-				ClientRegister.mail.setText("");
-			}
-		});
-		enter.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
-		enter.setBounds(690, 577, 150, 41);
-		clientRegister.add(enter);
-		
-		JButton clear = new JButton("LIMPAR");
-		clear.setForeground(new Color(204, 102, 0));
-		clear.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
-		clear.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
-		clear.setBounds(859, 577, 122, 41);
-		clientRegister.add(clear);
-		
-		JButton out = new JButton("SAIR");
-		out.setForeground(new Color(174, 34, 34));
-		out.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
-		out.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
-		out.setBounds(1015, 802, 122, 41);
-		clientRegister.add(out);
-		
-		eMail = new JLabel("E-mail:");
-		eMail.setForeground(new Color(153, 0, 51));
-		eMail.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 36));
-		eMail.setBounds(117, 533, 213, 40);
-		clientRegister.add(eMail);
-		
-		mail = new JTextField();
-		mail.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		mail.setBounds(117, 575, 499, 34);
-		clientRegister.add(mail);
-		
-		JButton search = new JButton("PESQUISAR");
-		search.setForeground(new Color(0, 100, 0));
-		search.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				ClientRegister.Search();
-			}
-		});
-		search.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
-		search.setBounds(987, 227, 150, 41);
-		clientRegister.add(search);
-		
         table = new JTable();
-		
 		table.setModel(new DefaultTableModel(
 			new Object[][] {
 			},
@@ -211,11 +148,147 @@ public class ClientRegisterPanel extends JPanel {
 		table.getColumnModel().getColumn(3).setPreferredWidth(300);			
 		
 		scroll = new JScrollPane();
-		scroll.setBounds(117, 638, 864, 205);
+		scroll.setBounds(117, 638, 885, 205);
 		clientRegister.add(scroll);
 		scroll.add(table);
 		scroll.setViewportView(table);
+		
+		JButton search = new JButton("PESQUISAR");
+		search.setForeground(new Color(0, 100, 0));
+		search.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ClientRegister.Search();
+			}
+		});
+		search.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
+		search.setBounds(987, 227, 150, 41);
+		clientRegister.add(search);
+		
+		JButton register = new JButton("CADASTRAR");
+		register.setForeground(new Color(0, 100, 0));
+		register.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ClientRegister.Register();
+				ClientRegister.insertClientCode.setText("");
+				ClientRegister.insertDocNumber.setText("");
+				ClientRegister.insertName.setText("");
+				ClientRegister.insertPosition.setText("");
+				ClientRegister.insertNumber.setText("");
+				ClientRegister.insertCoplement.setText("");
+				ClientRegister.insertPhoneNumber.setText("");
+				ClientRegister.mail.setText("");
+			}
+		});
+		register.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
+		register.setBounds(692, 575, 150, 41);
+		clientRegister.add(register);
+		
+		JButton select = new JButton("SELECIONAR");
+		select.setForeground(new Color(0, 100, 0));
+		select.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ClientRegister.Select();
+			}
+		});
+		select.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
+		select.setBounds(852, 575, 150, 41);
+		clientRegister.add(select);
+		
+		JButton clear = new JButton("LIMPAR");
+		clear.setForeground(new Color(204, 102, 0));
+		clear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ClientRegister.insertClientCode.setText("");
+				ClientRegister.insertDocNumber.setText("");
+				ClientRegister.insertName.setText("");
+				ClientRegister.insertPosition.setText("");
+				ClientRegister.insertNumber.setText("");
+				ClientRegister.insertCoplement.setText("");
+				ClientRegister.insertPhoneNumber.setText("");
+				ClientRegister.mail.setText("");
+				
+				/*
+				***************************************************************************************************************
+				***************************************************************************************************************
+				*/
+				
+				table.selectAll();
+				int rows = table.getRowCount();
+				for (int i = 0; i < rows; i ++) {
+					table.removeRowSelectionInterval(i, 5);
+					revalidate();
+				}
+				
+				/*
+				***************************************************************************************************************
+				***************************************************************************************************************
+				*/
+				
+			}
+		});
+		clear.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
+		clear.setBounds(852, 850, 150, 41);
+		clientRegister.add(clear);
+		
+		JButton actualizer = new JButton("ATUALIZAR");
+		actualizer.setForeground(new Color(0, 100, 0));
+		actualizer.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		actualizer.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
+		actualizer.setBounds(692, 850, 150, 41);
+		clientRegister.add(actualizer);
+		
+		JButton out = new JButton("SAIR");
+		out.setForeground(new Color(174, 34, 34));
+		out.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				UserInterface.InitialScreen();
+				LoginPanel.textField.setText("");
+				LoginPanel.passwordField.setText("");
+			}
+		});
+		out.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
+		out.setBounds(1015, 850, 122, 41);
+		clientRegister.add(out);
+		
+		eMail = new JLabel("E-mail:");
+		eMail.setForeground(new Color(153, 0, 51));
+		eMail.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 36));
+		eMail.setBounds(117, 533, 213, 40);
+		clientRegister.add(eMail);
+		
+		mail = new JTextField();
+		mail.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		mail.setBounds(117, 575, 565, 34);
+		clientRegister.add(mail);
 
+		JCheckBox atualizarEndereco = new JCheckBox("ATUALIZAR ENDERE\u00C7O / N\u00BA");
+		atualizarEndereco.setFont(new Font("Tahoma", Font.BOLD, 14));
+		atualizarEndereco.setBackground(Color.LIGHT_GRAY);
+		atualizarEndereco.setBounds(117, 850, 238, 23);
+		clientRegister.add(atualizarEndereco);
+		
+		JCheckBox atualizarComplemento = new JCheckBox("ATUALIZAR COMPLEMENTO");
+		atualizarComplemento.setFont(new Font("Tahoma", Font.BOLD, 14));
+		atualizarComplemento.setBackground(Color.LIGHT_GRAY);
+		atualizarComplemento.setBounds(117, 876, 238, 23);
+		clientRegister.add(atualizarComplemento);
+		
+		JCheckBox atualizarTelefone = new JCheckBox("ATUALIZAR TELEFONE / DDD");
+		atualizarTelefone.setFont(new Font("Tahoma", Font.BOLD, 14));
+		atualizarTelefone.setBackground(Color.LIGHT_GRAY);
+		atualizarTelefone.setBounds(360, 850, 238, 23);
+		clientRegister.add(atualizarTelefone);
+		
+		JCheckBox atualizarEmail = new JCheckBox("ATUALIZAR E-MAIL");
+		atualizarEmail.setFont(new Font("Tahoma", Font.BOLD, 14));
+		atualizarEmail.setBackground(Color.LIGHT_GRAY);
+		atualizarEmail.setBounds(360, 876, 238, 23);
+		clientRegister.add(atualizarEmail);
+		
 	}
 	
 	
