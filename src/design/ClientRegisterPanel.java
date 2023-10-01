@@ -39,7 +39,7 @@ public class ClientRegisterPanel extends JPanel {
 	public static JScrollPane scroll;
 	
 	public ClientRegisterPanel() {
-
+		
 		title = new JLabel("VIRTUAL STORE");
 		title.setFont(new Font("Bodoni MT Black", Font.BOLD, 100));
 		title.setForeground(new Color(153, 0, 51));
@@ -177,6 +177,7 @@ public class ClientRegisterPanel extends JPanel {
 				ClientRegister.insertCoplement.setText("");
 				ClientRegister.insertPhoneNumber.setText("");
 				ClientRegister.mail.setText("");
+				ClientRegister.GenerateClientId();
 			}
 		});
 		register.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
@@ -207,23 +208,8 @@ public class ClientRegisterPanel extends JPanel {
 				ClientRegister.insertPhoneNumber.setText("");
 				ClientRegister.mail.setText("");
 				
-				/*
-				***************************************************************************************************************
-				***************************************************************************************************************
-				*/
-				
-				table.selectAll();
-				int rows = table.getRowCount();
-				for (int i = 0; i < rows; i ++) {
-					table.removeRowSelectionInterval(i, 5);
-					revalidate();
-				}
-				
-				/*
-				***************************************************************************************************************
-				***************************************************************************************************************
-				*/
-				
+				ClientRegister.ClearTable();
+				ClientRegister.GenerateClientId();
 			}
 		});
 		clear.setFont(new Font("Bodoni MT Condensed", Font.BOLD, 30));
@@ -289,6 +275,7 @@ public class ClientRegisterPanel extends JPanel {
 		atualizarEmail.setBounds(360, 876, 238, 23);
 		clientRegister.add(atualizarEmail);
 		
+		ClientRegister.GenerateClientId();
 	}
 	
 	
